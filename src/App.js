@@ -81,7 +81,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 export default function App() {
   return (
     <>
-      <div className="w-[350px] h-[350px]  inline-block p-2  cursor-pointer hover:scale-105 ease-in-out duration-300">
+      {/* <div>
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -101,7 +101,7 @@ export default function App() {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </div> */}
       <TextInfoSlider />
     </>
   );
