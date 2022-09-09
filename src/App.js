@@ -3,7 +3,7 @@
 
 // import React, { Component } from "react";
 // //import Slider from "react-slick";
-import TextInfoSlider from "./sample";
+// import TextInfoSlider from "./sample";
 
 // export default class AutoPlay extends Component {
 //   render() {
@@ -65,22 +65,28 @@ import TextInfoSlider from "./sample";
 
 //import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
+// // Import Swiper styles
+// import "swiper/css";
 
-import { data } from "./mock";
+// import { data } from "./mock";
 
-// import Swiper core and required modules
-import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
+// // import Swiper core and required modules
+// import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
 
-// install Swiper modules
-SwiperCore.use([Autoplay, Pagination, Navigation]);
+// // install Swiper modules
+// SwiperCore.use([Autoplay, Pagination, Navigation]);
+
+import React from "react";
+import ProductSlider from "./ProductSlider";
+// import Card from "./component/Card";
 
 export default function App() {
   return (
     <>
+      <ProductSlider />
+      {/* <Card /> */}
       {/* <div>
         <Swiper
           spaceBetween={30}
@@ -102,7 +108,7 @@ export default function App() {
           ))}
         </Swiper>
       </div> */}
-      <TextInfoSlider />
+      {/* <TextInfoSlider /> */}
     </>
   );
 }

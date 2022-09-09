@@ -5,7 +5,7 @@ import { data } from "./mock";
 export default function TextInfoSlider(props) {
   return (
     <div>
-      <ImageSlider effectDelay={500} autoPlayDelay={2000}>
+      <ImageSlider effectDelay={500} autoPlayDelay={1000}>
         {data.map((item) => {
           return (
             <Slide>
