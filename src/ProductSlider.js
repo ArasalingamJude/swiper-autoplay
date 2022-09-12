@@ -1,226 +1,174 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { FreeMode } from "swiper";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
-// import { data } from "./mock";
 import "swiper/css";
 import "swiper/css/navigation";
-// import Card from "./component/Card";
 
-// import "bootstrap/dist/css/bootsrap.min.css";
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const ProductSlider = () => {
   return (
-    <div className=" px-5 py-5 bg-slate-400">
+    <div className=" bg-slate-400 ">
       <Swiper
         spaceBetween={30}
-        // centeredSlides={true}
+        centeredSlides={true}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
         }}
-        slidesPerView={4}
+        slidesPerView={1}
+        grabCursor={true}
         pagination={{
           clickable: true,
+          dynamicMainBullets: true,
+        }}
+        breakpoints={{
+          640: {
+            width: 640,
+            slidesPerView: 1,
+          },
+          768: {
+            width: 768,
+            slidesPerView: 2,
+          },
+          1024: {
+            width: 1024,
+            slidesPerView: 2,
+          },
         }}
         navigation={true}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/young-businessman-using-a-smartphone-against-an-urban-background-man-picture-id1395639015?b=1&k=20&m=1395639015&s=170667a&w=0&h=k7n9SnjKTAAINkC-VNAKpMepaYNfCB3HtbqY-CIGUFE="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
+        <div>
+          <SwiperSlide>
+            <div class="flex justify-center p-4  hover:scale-105 ease-in-out duration-300">
+              <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                    alt=""
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
+                <div class="p-6">
+                  <h5 class="text-gray-900 text-xl text-center font-medium mb-2">
+                    Card title
+                  </h5>
+                  <p class="text-gray-700 text-center text-base mb-4">
+                    Some quick example text to build on the card title
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/choic-high-or-low-quality-on-opposite-arrows-on-blackboard-picture-id640282964?b=1&k=20&m=640282964&s=170667a&w=0&h=3RTtcsKLMOsUawAl9Ao7oNJDfxj4V88R_bV3SMycjE4="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div class="flex justify-center p-4  hover:scale-105 ease-in-out duration-300">
+              <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                    alt=""
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
+                <div class="p-6">
+                  <h5 class="text-gray-900 text-xl text-center font-medium mb-2">
+                    Card title
+                  </h5>
+                  <p class="text-gray-700 text-center text-base mb-4">
+                    Some quick example text to build on the card title
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/young-businessman-using-a-smartphone-against-an-urban-background-man-picture-id1395639015?b=1&k=20&m=1395639015&s=170667a&w=0&h=k7n9SnjKTAAINkC-VNAKpMepaYNfCB3HtbqY-CIGUFE="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div class="flex justify-center p-4  hover:scale-105 ease-in-out duration-300">
+              <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                    alt=""
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
+                <div class="p-6">
+                  <h5 class="text-gray-900 text-xl text-center font-medium mb-2">
+                    Card title
+                  </h5>
+                  <p class="text-gray-700 text-center text-base mb-4">
+                    Some quick example text to build on the card title
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/cost-price-and-value-step-picture-id1307922234?b=1&k=20&m=1307922234&s=170667a&w=0&h=v_2zj-7uuGWhfo-DCXb0VLdRVoHbKa5Ih21A9Tzf4OA="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div class="flex justify-center p-4  hover:scale-105 ease-in-out duration-300">
+              <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                    alt=""
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
+                <div class="p-6">
+                  <h5 class="text-gray-900 text-xl text-center font-medium mb-2">
+                    Card title
+                  </h5>
+                  <p class="text-gray-700 text-center text-base mb-4">
+                    Some quick example text to build on the card title
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm lg:w-100 lg:h-100 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/choic-high-or-low-quality-on-opposite-arrows-on-blackboard-picture-id640282964?b=1&k=20&m=640282964&s=170667a&w=0&h=3RTtcsKLMOsUawAl9Ao7oNJDfxj4V88R_bV3SMycjE4="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div class="flex justify-center p-4  hover:scale-105 ease-in-out duration-300">
+              <div class="rounded-lg shadow-lg bg-white max-w-sm">
+                <a
+                  href="#!"
+                  data-mdb-ripple="true"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    class="rounded-t-lg"
+                    src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
+                    alt=""
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
+                <div class="p-6">
+                  <h5 class="text-gray-900 text-xl text-center font-medium mb-2">
+                    Card title
+                  </h5>
+                  <p class="text-gray-700 text-center text-base mb-4">
+                    Some quick example text to build on the card title
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/young-businessman-using-a-smartphone-against-an-urban-background-man-picture-id1395639015?b=1&k=20&m=1395639015&s=170667a&w=0&h=k7n9SnjKTAAINkC-VNAKpMepaYNfCB3HtbqY-CIGUFE="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {/* <Card /> */}
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/young-businessman-using-a-smartphone-against-an-urban-background-man-picture-id1395639015?b=1&k=20&m=1395639015&s=170667a&w=0&h=k7n9SnjKTAAINkC-VNAKpMepaYNfCB3HtbqY-CIGUFE="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {/* <Card /> */}
-          <div className=" p-5">
-            <div className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="www.google.com">
-                <img
-                  className="rounded-t-lg"
-                  src="https://media.istockphoto.com/photos/young-businessman-using-a-smartphone-against-an-urban-background-man-picture-id1395639015?b=1&k=20&m=1395639015&s=170667a&w=0&h=k7n9SnjKTAAINkC-VNAKpMepaYNfCB3HtbqY-CIGUFE="
-                  alt="pic"
-                />
-              </a>
-              <div className="p-5">
-                <a href="www.google.com">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Noteworthy technology acquisitions 2021
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        </div>
       </Swiper>
     </div>
   );
